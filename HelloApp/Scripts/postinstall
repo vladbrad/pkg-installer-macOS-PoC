@@ -1,3 +1,4 @@
 #!/bin/sh
 
-open /Applications/HelloApp.app --args One Two Three
+# A somewhat kludgy way of passing a value to the postinstall script, using launchctl's setenv/getenv/unsetenv commands.
+open /Applications/HelloApp.app --args --UID $(launchctl getenv HELLO_APP_ARG)
