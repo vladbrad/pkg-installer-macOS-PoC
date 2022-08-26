@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# A somewhat kludgy way of passing a value to the postinstall script, using launchctl's setenv/getenv/unsetenv commands.
+#/usr/local/bin/HelperTool --UID $(launchctl getenv HELLO_APP_ARG) > /var/tmp/HelperTool.log
+
+# Another way of passing a value to the app via the package's file name.
+/usr/local/bin/HelperTool --UID $(echo $PACKAGE_PATH | sed -n "s/[^_]*_\(.*\)\.pkg/\1/p")  > /var/tmp/HelperTool.log

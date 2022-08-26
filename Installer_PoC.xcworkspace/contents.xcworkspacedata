@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:HelperTool/HelperTool.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "container:HelloApp/HelloApp.xcodeproj">
    </FileRef>
 </Workspace>

@@ -5,8 +5,8 @@
 
 # Another, possibly better way of passing a value to the postinstall script via the package's file name.
 
-PKG_SESSION_NAME=Build/HelloApp_$(uuidgen).pkg
-cp Build/HelloApp.pkg $PKG_SESSION_NAME
+PKG_SESSION_NAME=Build/Installer-PoC_$(uuidgen).pkg
+cp Build/Installer-PoC.pkg $PKG_SESSION_NAME
 
 sudo installer -pkg $PKG_SESSION_NAME -target /
 
