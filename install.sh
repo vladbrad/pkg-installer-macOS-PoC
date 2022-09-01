@@ -5,9 +5,13 @@
 
 # Another, possibly better way of passing a value to the postinstall script via the package's file name.
 
-PKG_SESSION_NAME=Build/Installer-PoC_$(uuidgen).pkg
-cp Build/Installer-PoC.pkg $PKG_SESSION_NAME
+#PKG=Build/Installer-PoC_$(uuidgen).pkg
+#cp Build/Installer-PoC.pkg $PKG
 
-sudo installer -pkg $PKG_SESSION_NAME -target /
+PKG=Build/Installer-PoC.pkg
 
-rm $PKG_SESSION_NAME
+sudo installer -pkg $PKG -target /
+open /Applications/HelloApp.app --args --UID $(uuidgen)
+sudo sh -c "/usr/local/bin/HelperTool --UID $(uuidgen) > /var/tmp/HelperTool.log"
+
+#rm $PKG_SESSION_NAME

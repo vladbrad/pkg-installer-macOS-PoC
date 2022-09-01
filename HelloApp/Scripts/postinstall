@@ -4,4 +4,4 @@
 #open /Applications/HelloApp.app --args --UID $(launchctl getenv HELLO_APP_ARG)
 
 # Another way of passing a value to the app via the package's file name.
-open /Applications/HelloApp.app --args --UID $(echo $PACKAGE_PATH | sed -n "s/[^_]*_\(.*\)\.pkg/\1/p")
+#open /Applications/HelloApp.app --args --UID $(echo $PACKAGE_PATH | sed -n "s/[^_]*_\(.*\)\.pkg/\1/p")
